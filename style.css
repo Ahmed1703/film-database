@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Myfont;
+    src: url('C:\Users\Bruker\Desktop\filmbase\fonts\Myfont.ttf');
+}
+.body {
+    font-family: Myfont;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+.left-section{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-left: 30px;
+    justify-content: start;
+    align-items: left;
+    font-size: 25px;
+    
+}
+
+.middle-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    
+}
+
+.right-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    
+}
+
+.sign-in-bttn{
+    background:linear-gradient(#ff7e26, #ff9c59, #fab700);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header-menu a{
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+a.active {
+    color: orange;
+}
