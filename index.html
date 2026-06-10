@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +7,161 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<body class="body">
+
     <header class="header">
-        
+
             <div class="left-section">
                   <h3><i class="fa-solid fa-fire" aria-hidden="true"></i> Filmbase</h3>
             </div>
 
             <div class="middle-section">
                 <div class="header-menu">
-                    <a class="active" href="#home">Home</a>
-                    <a class href="#newest">Newest</a>
-                    <a class href="#movies">Movies</a>
-                    <a class href="#Tv-series">Tv-series</a>
-                    <a class href="#Blogg">Blogg</a>
-
-
-                    
+                    <a class="active" href="#home">Hjem</a>
+                    <a href="#newest">Nyeste</a>
+                    <a href="#movies">Filmer</a>
+                    <a href="#Tv-series">TV-serier</a>
+                    <a href="#Blogg">Blogg</a>
                 </div>
             </div>
 
             <div class="right-section">
-                <button class="sign-in-bttn">Sign in</button>
+                <button class="sign-in-bttn">Logg inn</button>
             </div>
-        
+
     </header>
 
-<body>
+
+    <section class="search-section">
+        <span class="tagline">Norges største filmbase</span>
+        <h1>Finn din neste film</h1>
+        <p class="subtitle">Tusenvis av filmer og serier, alt på ett sted.</p>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Søk etter filmer eller serier..." aria-label="Søk etter filmer eller serier">
+            <button class="search-bttn"><i class="fa-solid fa-search" aria-hidden="true"></i> Søk</button>
+        </div>
+    </section>
+
+
+    <section class="movies-section shade-2" id="newest">
+        <div class="section-head">
+            <h2><i class="fa-solid fa-bolt" aria-hidden="true"></i> Nyeste</h2>
+        </div>
+
+        <div class="movie-list">
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Michael</h4>
+                <p class="movie-info">2026 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 8.2</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Masters of the Universe</h4>
+                <p class="movie-info">2026 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 7.5</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Supergirl</h4>
+                <p class="movie-info">2026 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 7.4</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Scary Movie 6</h4>
+                <p class="movie-info">2026 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 6.5</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="movies-section" id="movies">
+        <div class="section-head">
+            <h2><i class="fa-solid fa-film" aria-hidden="true"></i> Populære filmer</h2>
+        </div>
+
+        <div class="movie-list">
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Disclosure Day</h4>
+                <p class="movie-info">2026 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 8.0</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Power Ballad</h4>
+                <p class="movie-info">2026 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 7.2</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Jackass: Best and Last</h4>
+                <p class="movie-info">2026 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 7.0</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Superman</h4>
+                <p class="movie-info">2025 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 8.1</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="blog-section shade-2" id="Blogg">
+        <div class="section-head">
+            <h2><i class="fa-solid fa-pen-nib" aria-hidden="true"></i> Fra bloggen</h2>
+        </div>
+
+        <div class="blog-grid">
+
+            <article class="blog-card">
+                <div class="blog-text">
+                    <h3 class="blog-title">De beste filmene fra 2026 så langt</h3>
+                    <p class="blog-sub">Årets høydepunkter, samlet på ett sted</p>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-text">
+                    <h3 class="blog-title">Slik finner du noe nytt å se i kveld</h3>
+                    <p class="blog-sub">Våre triks for å finne den perfekte filmen</p>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-text">
+                    <h3 class="blog-title">Bak kulissene på årets mest omtalte serie</h3>
+                    <p class="blog-sub">Vi snakket med skaperne</p>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-text">
+                    <h3 class="blog-title">Hva kommer til strømmetjenestene i høst</h3>
+                    <p class="blog-sub">De mest etterlengtede premierene</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p><i class="fa-solid fa-fire" aria-hidden="true"></i> Filmbase &middot; Laget for filmelskere</p>
+    </footer>
+
 </body>
 </html>
