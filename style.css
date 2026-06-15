@@ -130,6 +130,38 @@ a.active {
     letter-spacing: -1px;
 }
 
+.search-bar{
+    position: relative;
+    width: 300px;
+}
+
+#searchInput {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+
+#results div {
+    padding:  8px 12px;
+    cursor: pointer;
+}
+
+#results div:hover {
+    background: grey;
+}
+
 .subtitle{
     color: var(--muted);
     margin: 0 0 34px;
@@ -331,15 +363,76 @@ a.active {
 }
 
 .footer{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
     text-align: center;
     padding: 40px 20px;
     color: var(--muted);
     border-top: 1px solid var(--line);
-    background: var(--white);
+    background-color: black;
+    padding-left: 180px;
+    padding-right: 180px;
 }
 
+
+.footer h3 {
+    color: white;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-middle {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-menu a{
+    color: white;
+    text-decoration: none;
+    
+    margin-left: 32px;
+    font-size: 15px;
+    transition: color 0.15s ease;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+
+}
+
+.nyhetsbrev {
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 5px;
+}
+.subscribe-bttn {
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 8px, 20px, 8px, 2px;
+    font-size: 15px;
+    padding: 9px 18px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
 .footer i{
-    color: var(--orange);
+    color: white;
 }
 
 @media (max-width: 720px){
@@ -347,3 +440,4 @@ a.active {
         grid-template-columns: 1fr;
     }
 }
+

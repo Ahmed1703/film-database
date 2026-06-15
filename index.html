@@ -37,8 +37,8 @@
         <h1>Finn din neste film</h1>
         <p class="subtitle">Tusenvis av filmer og serier, alt på ett sted.</p>
         <div class="search-bar">
-            <input type="text" class="search-input" placeholder="Søk etter filmer eller serier..." aria-label="Søk etter filmer eller serier">
-            <button class="search-bttn"><i class="fa-solid fa-search" aria-hidden="true"></i> Søk</button>
+            <input type="text" id="searchInput" class="search-input" placeholder="Søk etter filmer eller serier..." aria-label="Søk etter filmer eller serier">
+            <div id="results"></div>
         </div>
     </section>
 
@@ -160,8 +160,28 @@
     </section>
 
     <footer class="footer">
-        <p><i class="fa-solid fa-fire" aria-hidden="true"></i> Filmbase &middot; Laget for filmelskere</p>
+
+        <div class="footer-left">
+              <h3 style="font-size: 34px;"><i class="fa-solid fa-fire" aria-hidden="true"></i> Filmbase</h3>
+        </div>
+
+         <div class="footer-middle">
+              <div class="footer-menu">
+                    <a class="active" href="#home">Hjem</a>
+                    <a href="#newest">Nyeste</a>
+                    <a href="#movies">Filmer</a>
+                    <a href="#Tv-series">TV-serier</a>
+                    <a href="#Blogg">Blogg</a>
+                </div>
+        </div>
+         <div class="footer-right">
+            <input class="nyhetsbrev" type="email" placeholder="Aboner på nyhetsbrev" aria-label="Aboner på nyhetsbrev">
+            <button class="subscribe-bttn">Abonner</button>
+        </div>
     </footer>
 
 </body>
 </html>
+
+<script src="script.js"></script>
+
