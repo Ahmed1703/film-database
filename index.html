@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmbase</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body class="body">
 
@@ -32,7 +32,7 @@
     </header>
 
 
-    <section class="search-section">
+    <section class="search-section" id="home">
         <span class="tagline">Norges største filmbase</span>
         <h1>Finn din neste film</h1>
         <p class="subtitle">Tusenvis av filmer og serier, alt på ett sted.</p>
@@ -121,7 +121,46 @@
     </section>
 
 
-    <section class="blog-section shade-2" id="Blogg">
+    <section class="movies-section shade-2" id="Tv-series">
+        <div class="section-head">
+            <h2><i class="fa-solid fa-tv" aria-hidden="true"></i> Populære TV-serier</h2>
+        </div>
+
+        <div class="movie-list">
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Severance</h4>
+                <p class="movie-info">2026 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 8.7</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">The Last of Us</h4>
+                <p class="movie-info">2025 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 8.5</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">Wednesday</h4>
+                <p class="movie-info">2025 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 8.1</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster"></div>
+                <h4 class="movie-title">The Bear</h4>
+                <p class="movie-info">2025 &middot; <i class="fa-solid fa-star" aria-hidden="true"></i> 8.6</p>
+                <button class="more-bttn">Mer info</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="blog-section" id="Blogg">
         <div class="section-head">
             <h2><i class="fa-solid fa-pen-nib" aria-hidden="true"></i> Fra bloggen</h2>
         </div>
@@ -180,8 +219,8 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
+
 </body>
 </html>
-
-<script src="script.js"></script>
 
