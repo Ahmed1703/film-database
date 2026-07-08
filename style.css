@@ -1,8 +1,3 @@
-@font-face {
-    font-family: Myfont;
-    src: url('fonts/Myfont.ttf');
-}
-
 :root {
     --orange: #f6821f;
     --orange-dark: #e1700f;
@@ -19,7 +14,7 @@
 }
 
 .body {
-    font-family: Myfont, "Segoe UI", Arial, sans-serif;
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
     margin: 0;
     background-color: var(--bone);
     color: var(--ink);
@@ -147,12 +142,24 @@ a.active {
 }
 
 #results div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 8px 12px;
     cursor: pointer;
 }
 
 #results div:hover {
     background: var(--bone-2);
+}
+
+.result-poster {
+    width: 34px;
+    height: 51px;
+    object-fit: cover;
+    border-radius: 4px;
+    background: var(--bone-2);
+    flex-shrink: 0;
 }
 
 .subtitle{
@@ -427,9 +434,336 @@ a.active {
     color: white;
 }
 
+/* Statusmeldinger (laster / feil / ingen treff) */
+.loading, .feil{
+    color: var(--muted);
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Gjør logoen i header og footer klikkbar tilbake til hovedsiden */
+.left-section h3 a,
+.footer-left h3 a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* --- Søkeresultatside --- */
+.results-section{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 40px 64px;
+}
+
+.results-search{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.results-search .search-input{
+    border-radius: 8px;
+    width: 100%;
+    max-width: none;
+}
+
+.results-search .search-bttn{
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.results-head h1{
+    font-size: 32px;
+    letter-spacing: -0.5px;
+    margin: 0 0 24px;
+}
+
+.filter-bar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.filter-field{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.filter-field select,
+.filter-field input{
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    background: var(--white);
+    color: var(--ink);
+    outline: none;
+}
+
+.filter-field select:focus,
+.filter-field input:focus{
+    border-color: var(--orange);
+}
+
+/* --- Detaljside --- */
+.detail-main{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.back-bttn{
+    display: inline-block;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 28px;
+    transition: color 0.15s ease;
+}
+
+.back-bttn:hover{
+    color: var(--orange);
+}
+
+.detail-hero{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 48px;
+}
+
+.detail-poster{
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.detail-poster img{
+    width: 100%;
+    border-radius: 12px;
+    background: var(--bone-2);
+    display: block;
+}
+
+.detail-body{
+    flex: 1;
+}
+
+.detail-body h1{
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin: 0 0 12px;
+}
+
+.detail-meta{
+    color: var(--muted);
+    font-size: 16px;
+    margin: 0 0 18px;
+}
+
+.detail-meta i{
+    color: var(--orange);
+}
+
+.detail-genres{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.genre-chip{
+    background: var(--bone-2);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+    color: var(--ink);
+}
+
+.detail-label{
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    margin: 0 0 10px;
+}
+
+.detail-overview{
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    max-width: 640px;
+}
+
+.detail-crew{
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0;
+}
+
+.detail-cast{
+    max-width: 1100px;
+    margin: 0 auto 48px;
+}
+
+.cast-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.cast-card{
+    text-align: center;
+}
+
+.cast-photo{
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    background: var(--bone-2);
+    margin-bottom: 8px;
+}
+
+.cast-name{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cast-role{
+    font-size: 13px;
+    color: var(--muted);
+    margin: 2px 0 0;
+}
+
+.detail-trailer{
+    max-width: 1100px;
+    margin: 0 auto 48px;
+}
+
+.trailer-wrap{
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.trailer-wrap iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Responsivt --- */
+@media (max-width: 900px){
+    .detail-hero{
+        flex-direction: column;
+    }
+
+    .detail-poster{
+        width: 220px;
+    }
+
+    .detail-body h1{
+        font-size: 32px;
+    }
+}
+
 @media (max-width: 720px){
     .blog-grid{
         grid-template-columns: 1fr;
+    }
+
+    .header{
+        flex-wrap: wrap;
+        height: auto;
+        padding: 12px 0;
+        gap: 8px;
+    }
+
+    .left-section{
+        padding-left: 20px;
+    }
+
+    .right-section{
+        padding-right: 20px;
+    }
+
+    .middle-section{
+        width: 100%;
+        order: 3;
+    }
+
+    .header-menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 0;
+    }
+
+    .header-menu a{
+        margin-left: 20px;
+    }
+
+    .search-section{
+        padding: 60px 20px 50px;
+    }
+
+    .search-section h1{
+        font-size: 36px;
+    }
+
+    .movie-list{
+        justify-content: center;
+    }
+
+    .movies-section,
+    .blog-section{
+        padding: 48px 20px;
+    }
+
+    .results-section,
+    .detail-main{
+        padding: 32px 20px;
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 28px;
+        text-align: left;
+        padding: 40px 24px;
+    }
+
+    .footer-menu{
+        align-items: flex-start;
+    }
+
+    .footer-menu a{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 420px){
+    .movie-card{
+        width: 100%;
+    }
+
+    .filter-field{
+        width: 100%;
+    }
+
+    .filter-field select,
+    .filter-field input{
+        width: 100%;
     }
 }
 

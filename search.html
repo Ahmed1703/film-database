@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Søk - Filmbase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+</head>
+<body class="body">
+
+    <header class="header">
+
+            <div class="left-section">
+                  <h3><a href="index.html"><i class="fa-solid fa-fire" aria-hidden="true"></i> Filmbase</a></h3>
+            </div>
+
+            <div class="middle-section">
+                <div class="header-menu">
+                    <a href="index.html#home">Hjem</a>
+                    <a href="index.html#newest">Nyeste</a>
+                    <a href="index.html#movies">Filmer</a>
+                    <a href="index.html#Tv-series">TV-serier</a>
+                    <a href="index.html#Blogg">Blogg</a>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <button class="sign-in-bttn">Logg inn</button>
+            </div>
+
+    </header>
+
+
+    <section class="results-section">
+
+        <form class="results-search" id="searchForm" role="search">
+            <input type="text" id="searchInput" class="search-input" placeholder="Søk etter filmer eller serier..." aria-label="Søk etter filmer eller serier" autocomplete="off">
+            <button type="submit" class="search-bttn"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Søk</button>
+        </form>
+
+        <div class="results-head">
+            <h1 id="results-title">Søkeresultater</h1>
+        </div>
+
+        <div class="filter-bar">
+            <label class="filter-field">
+                <span>Type</span>
+                <select id="filterType">
+                    <option value="all">Alle</option>
+                    <option value="movie">Filmer</option>
+                    <option value="tv">TV-serier</option>
+                </select>
+            </label>
+
+            <label class="filter-field">
+                <span>Sjanger</span>
+                <select id="filterGenre">
+                    <option value="all">Alle sjangere</option>
+                </select>
+            </label>
+
+            <label class="filter-field">
+                <span>Fra år</span>
+                <input type="number" id="filterYear" min="1900" max="2100" placeholder="F.eks. 2020">
+            </label>
+
+            <label class="filter-field">
+                <span>Min. vurdering</span>
+                <select id="filterRating">
+                    <option value="0">Alle</option>
+                    <option value="5">5+</option>
+                    <option value="6">6+</option>
+                    <option value="7">7+</option>
+                    <option value="8">8+</option>
+                </select>
+            </label>
+
+            <label class="filter-field">
+                <span>Sorter etter</span>
+                <select id="sortBy">
+                    <option value="relevance">Relevans</option>
+                    <option value="rating">Vurdering (høy-lav)</option>
+                    <option value="year-desc">Nyeste først</option>
+                    <option value="year-asc">Eldste først</option>
+                    <option value="name">Navn (A-Å)</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="movie-list" id="results-list">
+            <p class="loading">Laster inn resultater...</p>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-left">
+              <h3 style="font-size: 34px;"><i class="fa-solid fa-fire" aria-hidden="true"></i> Filmbase</h3>
+        </div>
+
+         <div class="footer-middle">
+              <div class="footer-menu">
+                    <a href="index.html#home">Hjem</a>
+                    <a href="index.html#newest">Nyeste</a>
+                    <a href="index.html#movies">Filmer</a>
+                    <a href="index.html#Tv-series">TV-serier</a>
+                    <a href="index.html#Blogg">Blogg</a>
+                </div>
+        </div>
+         <div class="footer-right">
+            <input class="nyhetsbrev" type="email" placeholder="Aboner på nyhetsbrev" aria-label="Aboner på nyhetsbrev">
+            <button class="subscribe-bttn">Abonner</button>
+        </div>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="search.js"></script>
+
+</body>
+</html>

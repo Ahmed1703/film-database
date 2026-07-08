@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detaljer - Filmbase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+</head>
+<body class="body">
+
+    <header class="header">
+
+            <div class="left-section">
+                  <h3><a href="index.html"><i class="fa-solid fa-fire" aria-hidden="true"></i> Filmbase</a></h3>
+            </div>
+
+            <div class="middle-section">
+                <div class="header-menu">
+                    <a href="index.html#home">Hjem</a>
+                    <a href="index.html#newest">Nyeste</a>
+                    <a href="index.html#movies">Filmer</a>
+                    <a href="index.html#Tv-series">TV-serier</a>
+                    <a href="index.html#Blogg">Blogg</a>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <button class="sign-in-bttn">Logg inn</button>
+            </div>
+
+    </header>
+
+
+    <main class="detail-main" id="detail-main" aria-live="polite">
+        <p class="loading">Laster inn informasjon...</p>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-left">
+              <h3 style="font-size: 34px;"><i class="fa-solid fa-fire" aria-hidden="true"></i> Filmbase</h3>
+        </div>
+
+         <div class="footer-middle">
+              <div class="footer-menu">
+                    <a href="index.html#home">Hjem</a>
+                    <a href="index.html#newest">Nyeste</a>
+                    <a href="index.html#movies">Filmer</a>
+                    <a href="index.html#Tv-series">TV-serier</a>
+                    <a href="index.html#Blogg">Blogg</a>
+                </div>
+        </div>
+         <div class="footer-right">
+            <input class="nyhetsbrev" type="email" placeholder="Aboner på nyhetsbrev" aria-label="Aboner på nyhetsbrev">
+            <button class="subscribe-bttn">Abonner</button>
+        </div>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="details.js"></script>
+
+</body>
+</html>
